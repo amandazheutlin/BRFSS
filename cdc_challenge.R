@@ -6,6 +6,7 @@
 workdir <- "/data/swe_gwas/ABZ/Misc/"
 setwd(workdir)
 
+
 libs <- c("gbm", "dplyr", "psych", "ggplot2", "gdata", "RColorBrewer", "colorRamps", "survey",
           "caret", "glmnet", "doMC")
 invisible(lapply(libs, require, character.only = TRUE))
