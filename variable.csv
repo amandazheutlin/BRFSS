@@ -1,0 +1,784 @@
+"variable","description"
+"X_STATE","State FIPS Code
+                                                                                                                "
+"X_STATE","State FIPS Code
+                                                                                                                "
+"FMONTH","File Month
+                                                                                                                "
+"IDATE","Interview Date
+                                                                                                                 "
+"IMONTH","Interview Month
+                                                                                                                 "
+"IDAY","Interview Day
+                                                                                                                 "
+"IYEAR","Interview Year
+                                                                                                                  "
+"DISPCODE","Final Disposition
+                                                                                                                  "
+"SEQNO","Annual Sequence Number
+                                                                                                                  "
+"X_PSU","Primary Sampling Unit (Equal to Annual Sequence Number)
+                                                                                                                  "
+"CTELENUM","Correct Telephone Number?
+                                                                                                                  "
+"PVTRESD1","Is this a private residence?    [READ ONLY IF NECESSARY: “By private residence, we mean someplace like a
+                 house or apartment.”]
+                                                                                                                  "
+"COLGHOUS","Do you live in college housing?
+                                                                                                                  "
+"STATERES","Do you reside in ____(state)____?
+                                                                                                                          "
+"CELLFON3","Is this a cellular telephone? (Telephone service over the internet counts as landline service (includes Vonage, Magic
+                Jack and other home-based phone services).)[Read only if necessary: “By cellular (or cell) telephone we mean a
+                telephone that is mobile and usable outside of your neighborhood.”]
+                                                                                                                          "
+"LADULT","Are you 18 years of age or older?
+                                                                                                                          "
+"NUMADULT","Number of Adults in Household
+                                                                                                                "
+"NUMMEN","Number of Adult Men in Household
+                                                                                                                "
+"NUMWOMEN","Number of Adult Women in Household
+                                                                                                                    "
+"CTELNUM1","Is this        (phone number)      ?
+                                                                                                                    "
+"CELLFON2","Is this a cellular telephone?
+                                                                                                                    "
+"CADULT","Are you 18 years of age or older?
+                                                                                                                              "
+"PVTRESD2","Do you live in a private residence, that is, not in a dormitory or other type of group living situation?
+                                                                                                                              "
+"CCLGHOUS","Do you live in college housing?
+                                                                                                                              "
+"CSTATE","Are you a resident of [STATE]?
+                                                                                                                      "
+"LANDLINE","Do you also have a landline telephone in your home that is used to make and receive calls?
+                                                                                                                      "
+"HHADULT","How many members of your household, including yourself, are 18 years of age or older?
+                                                                                                                      "
+"GENHLTH","Would you say that in general your health is:
+                                                                                                                         "
+"PHYSHLTH","Now thinking about your physical health, which includes physical illness and injury, for how many days during the past
+               30 days was your physical health not good?
+                                                                                                                         "
+"MENTHLTH","Now thinking about your mental health, which includes stress, depression, and problems with emotions, for how many
+               days during the past 30 days was your mental health not good?
+                                                                                                                         "
+"POORHLTH","During the past 30 days, for about how many days did poor physical or mental health keep you from doing your usual
+                 activities, such as self-care, work, or recreation?
+                                                                                                                          "
+"HLTHPLN1","Do you have any kind of health care coverage, including health insurance, prepaid plans such as HMOs, or
+                 government plans such as Medicare, or Indian Health Service?
+                                                                                                                          "
+"PERSDOC2","Do you have one person you think of as your personal doctor or health care provider? (If ""No"" ask ""Is there more
+                 than one or is there no person who you think of as your personal doctor or health care provider?"".)
+                                                                                                                          "
+"MEDCOST","Was there a time in the past 12 months when you needed to see a doctor but could not because of cost?
+                                                                                                                           "
+"CHECKUP1","About how long has it been since you last visited a doctor for a routine checkup?    [A routine checkup is a general
+                physical exam, not an exam for a specific injury, illness, or condition.]
+                                                                                                                           "
+"BPHIGH4","Have you EVER been told by a doctor, nurse or other health professional that you have high blood pressure? (If
+                ""Yes"" and respondent is female, ask ""Was this only when you were pregnant?"".)
+                                                                                                                       "
+"BPMEDS","Are you currently taking medicine for your high blood pressure?
+                                                                                                                       "
+"BLOODCHO","Blood cholesterol is a fatty substance found in the blood. Have you EVER had your blood cholesterol checked?
+                                                                                                                       "
+"CHOLCHK","About how long has it been since you last had your blood cholesterol checked?
+                                                                                                                           "
+"TOLDHI2","Have you EVER been told by a doctor, nurse or other health professional that your blood cholesterol is high?
+                                                                                                                           "
+"CVDINFR4","(Ever told) you had a heart attack, also called a myocardial infarction?
+                                                                                                                           "
+"CVDCRHD4","(Ever told) you had angina or coronary heart disease?
+                                                                                                                "
+"CVDSTRK3","(Ever told) you had a stroke.
+                                                                                                                "
+"ASTHMA3","(Ever told) you had asthma?
+                                                                                                                "
+"ASTHNOW","Do you still have asthma?
+                                                                                                                 "
+"CHCSCNCR","(Ever told) you had skin cancer?
+                                                                                                                 "
+"CHCOCNCR","(Ever told) you had any other types of cancer?
+                                                                                                                 "
+"CHCCOPD1","(Ever told) you have Chronic Obstructive Pulmonary Disease or COPD, emphysema or chronic bronchitis?
+                                                                                                                               "
+"HAVARTH3","(Ever told) you have some form of arthritis, rheumatoid arthritis, gout, lupus, or fibromyalgia? (Arthritis diagnoses
+                 include: rheumatism, polymyalgia rheumatica; osteoarthritis (not osteporosis); tendonitis, bursitis, bunion, tennis
+                 elbow; carpal tunnel syndrome, tarsal tunnel syndrome; joint infection, etc.)
+                                                                                                                               "
+"ADDEPEV2","(Ever told) you that you have a depressive disorder, including depression, major depression, dysthymia, or minor
+                 depression?
+                                                                                                                               "
+"CHCKIDNY","(Ever told) you have kidney disease? Do NOT include kidney stones, bladder infection or incontinence.(Incontinence
+                 is not being able to control urine flow.)
+                                                                                                                         "
+"DIABETE3","(Ever told) you have diabetes (If ""Yes"" and respondent is female, ask ""Was this only when you were pregnant?"". If
+                 Respondent says pre-diabetes or borderline diabetes, use response code 4.)
+                                                                                                                         "
+"DIABAGE2","How old were you when you were told you have diabetes?
+                                                                                                                         "
+"SEX","Indicate sex of respondent.
+                                                                                                                "
+"MARITAL","Are you: (marital status)
+                                                                                                                "
+"EDUCA","What is the highest grade or year of school you completed?
+                                                                                                                "
+"RENTHOM1","Do you own or rent your home? (Home is defined as the place where you live most of the time/the majority of the
+               year.)
+                                                                                                                     "
+"NUMHHOL2","Do you have more than one telephone number in your household? Do not include cell phones or numbers that are
+               only used by a computer or fax machine.
+                                                                                                                     "
+"NUMPHON2","How many of these telephone numbers are residential numbers?
+                                                                                                                     "
+"CPDEMO1","Do you have a cell phone for personal use? Please include cell phones used for both business and personal use
+                                                                                                                     "
+"VETERAN3","Have you ever served on active duty in the United States Armed Forces, either in the regular military or in a National
+                Guard or military reserve unit? (Active duty does not include training for the Reserves or National Guard, but DOES
+                include activation, for example, for the Persian Gulf War.)
+                                                                                                                           "
+"EMPLOY1","Are you currently…?
+                                                                                                                           "
+"CHILDREN","How many children less than 18 years of age live in your household?
+                                                                                                                           "
+"INCOME2","Is your annual household income from all sources: (If respondent refuses at any income level, code ""Refused."")
+                                                                                                                        "
+"INTERNET","Have you used the internet in the past 30 days?
+                                                                                                                        "
+"WEIGHT2","About how much do you weigh without shoes? (If respondent answers in metrics, put a 9 in the first column)[Round
+               fractions up.]
+                                                                                                                         "
+"HEIGHT3","About how tall are you without shoes? (If respondent answers in metrics, put a 9 in the first column)[Round fractions
+               down.]
+                                                                                                                         "
+"PREGNANT","To your knowledge, are you now pregnant?
+                                                                                                                         "
+"QLACTLM2","Are you limited in any way in any activities because of physical, mental, or emotional problems?
+                                                                                                                          "
+"USEEQUIP","Do you now have any health problem that requires you to use special equipment, such as a cane, a wheelchair, a
+                  special bed, or a special telephone? (Include occasional use or use in certain circumstances.)
+                                                                                                                          "
+"BLIND","Are you blind or do you have serious difficulty seeing, even when wearing glasses?
+                                                                                                                          "
+"DECIDE","Because of a physical, mental, or emotional condition, do you have serious difficulty concentrating, remembering, or
+                 making decisions?
+                                                                                                                           "
+"DIFFWALK","Do you have serious difficulty walking or climbing stairs?
+                                                                                                                           "
+"DIFFDRES","Do you have difficulty dressing or bathing?
+                                                                                                                           "
+"DIFFALON","Because of a physical, mental, or emotional condition, do you have difficulty doing errands alone such as visiting a
+                 doctor’s office or shopping?
+                                                                                                                           "
+"SMOKE100","Have you smoked at least 100 cigarettes in your entire life?     [Note: 5 packs = 100 cigarettes]
+                                                                                                                           "
+"SMOKDAY2","Do you now smoke cigarettes every day, some days, or not at all?
+                                                                                                                           "
+"STOPSMK2","During the past 12 months, have you stopped smoking for one day or longer because you were trying to quit
+                 smoking?
+                                                                                                                       "
+"LASTSMK2","How long has it been since you last smoked a cigarette, even one or two puffs?
+                                                                                                                       "
+"USENOW3","Do you currently use chewing tobacco, snuff, or snus every day, some days, or not at all? (Snus (Swedish for snuff)
+                is a moist smokeless tobacco, usually sold in small pouches that are placed under the lip against the gum.)[Snus
+                (rhymes with ´goose´)]
+                                                                                                                          "
+"ALCDAY5","During the past 30 days, how many days per week or per month did you have at least one drink of any alcoholic
+                beverage such as beer, wine, a malt beverage or liquor?
+                                                                                                                          "
+"AVEDRNK2","One drink is equivalent to a 12-ounce beer, a 5-ounce glass of wine, or a drink with one shot of liquor. During the past
+                30 days, on the days when you drank, about how many drinks did you drink on the average? (A 40 ounce beer
+                would count as 3 drinks, or a cocktail drink with 2 shots would count as 2 drinks.)
+                                                                                                                           "
+"DRNK3GE5","Considering all types of alcoholic beverages, how many times during the past 30 days did you have 5 or more drinks
+                for men or 4 or more drinks for women on an occasion?
+                                                                                                                           "
+"MAXDRNKS","During the past 30 days, what is the largest number of drinks you had on any occasion?
+                                                                                                                           "
+"FRUITJU1","During the past month, how many times per day, week or month did you drink 100 percent PURE fruit juices? Do not
+               include fruit-flavored drinks with added sugar or fruit juice you made at home and added sugar to. Only include 100
+               percent juice.
+                                                                                                                          "
+"FRUIT1","During the past month, not counting juice, how many times per day, week, or month did you eat fruit? Count fresh,
+               frozen, or canned fruit.(Read only if necessary: “Your best guess is fine. Include apples, bananas, applesauce,
+               oranges, grape fruit, fruit salad, watermelon, cantaloupe or musk melon, papaya, lychees, star fruit,)
+                                                                                                                          "
+"FVBEANS","During the past month, how many times per day, week, or month did you eat cooked or canned beans, such as
+               refried, baked, black, garbanzo beans, beans in soup, soybeans, edamame, tofu or lentils. Do NOT include long
+               green beans.(Read only if necessary: “Include round or oval beans or peas such as navy, pinto, split peas, cow peas,
+               garbanzo beans, lentils, soy beans and tofu. Do NOT include long green beans such as string beans, broad or
+               winged beans, or pole beans.”)
+                                                                                                                         "
+"FVGREEN","During the past month, how many times per day, week, or month did you eat dark green vegetables for example
+               broccoli or dark leafy greens including romaine, chard, collard greens or spinach?
+                                                                                                                         "
+"FVORANG","During the past month, how many times per day, week, or month did you eat orange-colored vegetables such as
+               sweet potatoes, pumpkin, winter squash, or carrots? (Read only if needed: “Winter squash have hard, thick skins
+               and deep yellow to orange flesh. They include acorn, buttercup, and spaghetti squash.”)
+                                                                                                                        "
+"VEGETAB1","Not counting what you just told me about, during the past month, about how many times per day, week, or month did
+               you eat OTHER vegetables? Examples of other vegetables include tomatoes, tomato juice or V-8 juice, corn,
+               eggplant, peas, lettuce, cabbage, and white potatoes that are not fried such as baked or mashed potatoes.(Read only
+               if needed: “Do not count vegetables you have already counted and do not include fried potatoes.”)
+                                                                                                                        "
+"EXERANY2","During the past month, other than your regular job, did you participate in any physical activities or exercises such as
+                 running, calisthenics, golf, gardening, or walking for exercise?
+                                                                                                                             "
+"EXRACT11","What type of physical activity or exercise did you spend the most time doing during the past month?
+                                                                                                                       "
+"EXRACT11","What type of physical activity or exercise did you spend the most time doing during the past month?
+                                                                                                                        "
+"EXRACT11","What type of physical activity or exercise did you spend the most time doing during the past month?
+                                                                                                                         "
+"EXEROFT1","How many times per week or per month did you take part in this activity during the past month?
+                                                                                                                         "
+"EXERHMM1","And when you took part in this activity, for how many minutes or hours did you usually keep at it?
+                                                                                                                         "
+"EXRACT21","What other type of physical activity gave you the next most exercise during the past month?
+                                                                                                                       "
+"EXRACT21","What other type of physical activity gave you the next most exercise during the past month?
+                                                                                                                       "
+"EXRACT21","What other type of physical activity gave you the next most exercise during the past month?
+                                                                                                                         "
+"EXEROFT2","How many times per week or per month did you take part in this activity during the past month?
+                                                                                                                         "
+"EXERHMM2","And when you took part in this activity, for how many minutes or hours did you usually keep at it?
+                                                                                                                         "
+"STRENGTH","During the past month, how many times per week or per month did you do physical activities or exercises to
+                 STRENGTHEN your muscles? [Do NOT count aerobic activities like walking, running, or bicycling. Count activities
+                 using your own body weight like yoga, sit-ups or push-ups and those using weight machines, free weights, or elastic
+                 bands.]
+                                                                                                                           "
+"LMTJOIN3","Are you now limited in any way in any of your usual activities because of arthritis or joint symptoms?
+                                                                                                                           "
+"ARTHDIS2","Do arthritis or joint symptoms now affect whether you work, the type of work you do or the amount of work you do?
+                                                                                                                           "
+"ARTHSOCL","During the past 30 days, to what extent has your arthritis or joint symptoms interfered with your normal social
+                  activities, such as going shopping, to the movies, or to religious or social gatherings?
+                                                                                                                              "
+"JOINPAIN","Please think about the past 30 days, keeping in mind all of your joint pain or aching and whether or not you have
+                  taken medication. DURING THE PAST 30 DAYS, how bad was your joint pain ON AVERAGE? [Please answer on
+                  a scale of 0 to 10 where 0 is no pain or aching and 10 is pain or aching as bad as it can be.]
+                                                                                                                              "
+"SEATBELT","How often do you use seat belts when you drive or ride in a car? Would you say—
+                                                                                                                                "
+"FLUSHOT6","During the past 12 months, have you had either a flu shot or a flu vaccine that was sprayed in your nose? (A new flu
+                 shot came out in 2011 that injects vaccine into the skin with a very small needle. It is called Fluzone Intradermal
+                 vaccine. This is also considered a flu shot.)
+                                                                                                                                "
+"FLSHTMY2","During what month and year did you receive your most recent flu shot injected into your arm or flu vaccine that was
+                sprayed in your nose?
+                                                                                                                           "
+"IMFVPLAC","At what kind of place did you get your last flu shot/vaccine?
+                                                                                                                           "
+"PNEUVAC3","A pneumonia shot or pneumococcal vaccine is usually given only once or twice in a person´s lifetime and is different
+                from the flu shot. Have you ever had a pneumonia shot?
+                                                                                                                         "
+"HIVTST6","Have you ever been tested for HIV? Do not count tests you may have had as part of a blood donation. Include
+                testing fluid from your mouth.
+                                                                                                                         "
+"HIVTSTD3","Not including blood donations, in what month and year was your last HIV test? (If response is before January 1985,
+                code ""777777"".)
+                                                                                                                         "
+"WHRTST10","Where did you have your last HIV test — at a private doctor or HMO office, at a counseling and testing site, in the
+                 emergency room, as an inpatient in a hospital, at a clinic, in a jail or prison, at a drug treatment facility, at home, or
+                 somewhere else?
+                                                                                                                                    "
+"PDIABTST","Have you had a test for high blood sugar or diabetes within the past three years?
+                                                                                                                                    "
+"PREDIAB1","Have you ever been told by a doctor or other health professional that you have pre-diabetes or borderline diabetes?
+                (If “Yes” and respondent is female, ask: “Was this only when you were pregnant?”)
+                                                                                                                         "
+"INSULIN","Are you now taking insulin?
+                                                                                                                         "
+"BLDSUGAR","About how often do you check your blood for glucose or sugar? Include times when checked by a family member or
+               friend, but do NOT include times when checked by a health professional.
+                                                                                                                       "
+"FEETCHK2","About how often do you check your feet for any sores or irritations? Include times when checked by a family
+               member or friend, but do NOT include times when checked by a health professional.
+                                                                                                                       "
+"DOCTDIAB","About how many times in the past 12 months have you seen a doctor, nurse, or other health professional for your
+               diabetes?
+                                                                                                                       "
+"CHKHEMO3","A test for “A one C” measures the average level of blood sugar over the past three months. About how many times
+               in the past 12 months has a doctor, nurse, or other health professional checked you for “A one C”?
+                                                                                                                       "
+"FEETCHK","About how many times in the past 12 months has a health professional checked your feet for any sores or irritations?
+                                                                                                                       "
+"EYEEXAM","When was the last time you had an eye exam in which the pupils were dilated? This would have made you
+               temporarily sensitive to bright light.
+                                                                                                                       "
+"DIABEYE","Has a doctor ever told you that diabetes has affected your eyes or that you had retinopathy?
+                                                                                                                          "
+"DIABEDU","Have you ever taken a course or class in how to manage your diabetes yourself?
+                                                                                                                          "
+"PAINACT2","During the past 30 days, for about how many days did pain make it hard for you to do your usual activities, such as
+                self-care, work, or recreation?
+                                                                                                                          "
+"QLMENTL2","During the past 30 days, for about how may days have you felt sad, blue, or depressed?
+                                                                                                                         "
+"QLSTRES2","During the past 30 days, for about how many days have you felt worried, tense, or anxious?
+                                                                                                                         "
+"QLHLTH2","During the past 30 days, for about how many days have you felt very healthy and full of energy?
+                                                                                                                         "
+"CAREGIV1","During the past 30 days, did you provide regular care or assistance to a friend or family member who has a health
+                problem or disability?
+                                                                                                                         "
+"CRGVREL1","What is his/her relationship to you? For example is he/she your (mother/daughter or father/son)?
+                                                                                                                       "
+"CRGVLNG1","For how long have you provided care for that person? Would you say…
+                                                                                                                       "
+"CRGVHRS1","In an average week, how many hours do you provide care or assistance? Would you say…
+                                                                                                                          "
+"CRGVPRB1","What is the main health problem, long-term illness, or disability that the person you care for has?
+                                                                                                                          "
+"CRGVPERS","…Managing personal care such as giving medications, feeding, dressing, or bathing?
+                                                                                                                    "
+"CRGVHOUS","…Managing household tasks such as cleaning, managing money, or preparing meals?
+                                                                                                                    "
+"CRGVMST2","Of the following support services, which one do you MOST need, that you are not currently getting?
+                                                                                                                         "
+"CRGVEXPT","In the next 2 years, do you expect to provide care or assistance to a friend or family member who has a health
+                problem or disability?
+                                                                                                                         "
+"VIDFCLT2","How much difficulty, if any, do you have in recognizing a friend across the street? Would you say—
+                                                                                                                         "
+"VIREDIF3","How much difficulty, if any, do you have reading print in newspapers, magazines, recipes, menus, or numbers on the
+                 telephone? Would you say—
+                                                                                                                         "
+"VIPRFVS2","When was the last time you had your eyes examined by any doctor or eye care provider?
+                                                                                                                      "
+"VINOCRE2","What is the main reason you have not visited an eye care professional in the past 12 months?
+                                                                                                                      "
+"VIEYEXM2","When was the last time you had an eye exam in which the pupils were dilated? This would have made you
+                 temporarily sensitive to bright light.
+                                                                                                                    "
+"VIINSUR2","Do you have any kind of health insurance coverage for eye care?
+                                                                                                                    "
+"VICTRCT4","Have you been told by an eye doctor or other health care professional that you NOW have cataracts?
+                                                                                                                       "
+"VIGLUMA2","Have you EVER been told by an eye doctor or other health care professional that you had glaucoma?
+                                                                                                                       "
+"VIMACDG2","Have you EVER been told by an eye doctor or other health care professional that you had age-related macular
+                degeneration?
+                                                                                                                       "
+"CIMEMLOS","During the past 12 months, have you experienced confusion or memory loss that is happening more often or is
+                getting worse?
+                                                                                                                       "
+"CDHOUSE","During the past 12 months, as a result of confusion or memory loss, how often have you given up day-to-day
+                household activities or chores you used to do, such as cooking, cleaning, taking medications, driving, or paying bills?
+                                                                                                                            "
+"CDASSIST","As a result of confusion or memory loss, how often do you need assistance with these day-to-day activities?
+                                                                                                                            "
+"CDHELP","When you need help with these day-to-day activities, how often are you able to get the help that you need?
+                                                                                                                         "
+"CDSOCIAL","During the past 12 months, how often has confusion or memory loss interfered with your ability to work, volunteer, or
+               engage in social activities outside the home?
+                                                                                                                         "
+"CDDISCUS","Have you or anyone else discussed your confusion or memory loss with a health care professional?
+                                                                                                                       "
+"WTCHSALT","Are you currently watching or reducing your sodium or salt intake?
+                                                                                                                       "
+"LONGWTCH","How many days, weeks, months, or years have you been watching or reducing your sodium or salt intake?
+                                                                                                                         "
+"DRADVISE","Has a doctor or other health professional ever advised you to reduce sodium or salt intake?
+                                                                                                                         "
+"ASTHMAGE","How old were you when you were first told by a doctor, nurse or other health professional that you had asthma?
+                                                                                                                         "
+"ASATTACK","During the past 12 months, have you had an episode of asthma or an asthma attack?
+                                                                                                                           "
+"ASERVIST","During the past 12 months, how many times did you visit an emergency room or urgent care center because of your
+               asthma?
+                                                                                                                           "
+"ASDRVIST","During the past 12 months, how many times did you see a doctor, nurse or other health professional for urgent
+               treatment of worsening asthma symptoms?
+                                                                                                                           "
+"ASRCHKUP","During the past 12 months, how many times did you see a doctor, nurse, or other health professional for a routine
+                 checkup for your asthma?
+                                                                                                                        "
+"ASACTLIM","During the past 12 months, how many days were you unable to work or carry out your usual activities because of your
+                 asthma?
+                                                                                                                        "
+"ASYMPTOM","Symptoms of asthma include cough, wheezing, shortness of breath, chest tightness and phlegm production when you
+                 don´t have a cold or respiratory infection. During the past 30 days, how often did you have any symptoms of asthma?
+                                                                                                                          "
+"ASNOSLEP","During the past 30 days, how many days did symptoms of asthma make it difficult for you to stay asleep? Would you
+                 say—
+                                                                                                                          "
+"ASTHMED3","During the past 30 days, how many days did you take a prescription asthma medication to PREVENT an asthma
+               attack from occurring?
+                                                                                                                     "
+"ASINHALR","During the past 30 days, how often did you use a prescription asthma inhaler DURING AN ASTHMA ATTACK to stop
+               it?
+                                                                                                                     "
+"HAREHAB1","Following your heart attack, did you go to any kind of outpatient rehabilitation? This is sometimes called “rehab.”
+                                                                                                                             "
+"STREHAB1","Following your stroke did you go to any kind of outpatient rehabilitation? This is sometimes called “rehab.”
+                                                                                                                             "
+"CVDASPRN","Do you take aspirin daily or every other day?
+                                                                                                                             "
+"ASPUNSAF","Do you have a health problem or condition that makes taking aspirin unsafe for you? (If ""Yes,"" ask ""Is this a stomach
+                condition?"")
+                                                                                                                          "
+"RLIVPAIN","Do you take aspirin to relieve pain?
+                                                                                                                          "
+"RDUCHART","Do you take aspirin to reduce the chance of a heart attack?
+                                                                                                                          "
+"RDUCSTRK","Do you take aspirin to reduce the chance of a stroke?
+                                                                                                                           "
+"ARTTODAY","Thinking about your arthritis or joint symptoms, which of the following best describes you TODAY?
+                                                                                                                           "
+"ARTHWGT","Has a doctor or other health professional EVER suggested losing weight to help your arthritis or joint symptoms?
+                                                                                                                           "
+"ARTHEXER","Has a doctor or other health professional EVER suggested physical activity or exercise to help your arthritis or joint
+                symptoms? (If the respondent is unclear about whether this means an increase or decrease in physical activity, this
+                means increase.)
+                                                                                                                            "
+"ARTHEDU","Have you EVER taken an educational course or class to teach you how to manage problems related to your arthritis
+                or joint symptoms?
+                                                                                                                            "
+"TETANUS","Since 2005, have you had a tetanus shot? (If yes, ask: “Was this Tdap, the tetanus shot that also has pertussis or
+               whooping cough vaccine?”)
+                                                                                                                          "
+"HPVADVC2","Have you ever had the HPV vaccination? (Human Papilloma Virus (Human Pap•uh•loh•muh Virus), Gardasil
+               (Gar•duh• seel), Cervarix (Serv a rix))
+                                                                                                                          "
+"HPVADSHT","How many HPV shots did you receive?
+                                                                                                                    "
+"SHINGLE2","Have you ever had the shingles or zoster vaccine?
+                                                                                                                    "
+"HADMAM","A mammogram is an x-ray of each breast to look for breast cancer. Have you ever had a mammogram?
+                                                                                                                    "
+"HOWLONG","How long has it been since you had your last mammogram?
+                                                                                                                        "
+"HADPAP2","A Pap test is a test for cancer of the cervix. Have you ever had a Pap test?
+                                                                                                                        "
+"LASTPAP2","How long has it been since you had your last Pap test?
+                                                                                                                      "
+"HPVTEST","An HPV test is sometimes given with the Pap test for cervical cancer screening. Have you ever had an HPV test?
+                                                                                                                      "
+"HPLSTTST","How long has it been since you had your last HPV test?
+                                                                                                                  "
+"HADHYST2","Have you had a hysterectomy? (A hysterectomy is an operation to remove the uterus (womb).)
+                                                                                                                  "
+"PROFEXAM","A clinical breast exam is when a doctor, nurse, or other health professional feels the breast for lumps. Have you ever
+               had a clinical breast exam?
+                                                                                                                           "
+"LENGEXAM","How long has it been since your last breast exam?
+                                                                                                                           "
+"BLDSTOOL","A blood stool test is a test that may use a special kit at home to determine whether the stool contains blood. Have
+                you ever had this test using a home kit?
+                                                                                                                            "
+"LSTBLDS3","How long has it been since you had your last blood stool test using a home kit?
+                                                                                                                            "
+"HADSIGM3","Sigmoidoscopy and colonoscopy are exams in which a tube is inserted in the rectum to view the colon for signs of
+                cancer or other health problems. Have you ever had either of these exams?
+                                                                                                                          "
+"HADSGCO1","For a SIGMOIDOSCOPY, a flexible tube is inserted into the rectum to look for problems. A COLONOSCOPY is
+                similar, but uses a longer tube, and you are usually given medication through a needle in your arm to make you
+                sleepy and told to have someone else drive you home after the test. Was your MOST RECENT exam a
+                sigmoidoscopy or a colonoscopy?
+                                                                                                                          "
+"LASTSIG3","How long has it been since you had your last sigmoidoscopy or colonoscopy?
+                                                                                                                           "
+"PCPSAAD2","Has a doctor, nurse, or other health professional EVER talked with you about the advantages of the PSA test?
+                                                                                                                           "
+"PCPSADI1","Has a doctor, nurse, or other health professional EVER talked with you about the disadvantages of the PSA test?
+                                                                                                                        "
+"PCPSARE1","Has a doctor, nurse, or other health professional EVER recommended that you have a PSA test?
+                                                                                                                        "
+"PSATEST1","Have you EVER HAD a PSA test?
+                                                                                                                        "
+"PSATIME","How long has it been since you had your last PSA test?
+                                                                                                                "
+"PCPSARS1","What was the MAIN reason you had this PSA test – was it …?
+                                                                                                                "
+"PCPSADE1","Which of the following best describes the decision to have the PSA test done?
+                                                                                                                     "
+"PCDMDECN","Who made the decision with you? (Mark all that apply)
+                                                                                                                     "
+"SCNTMNY1","How often in the past 12 months would you say you were worried or stressed about having enough money to pay
+               your rent/mortgage? Would you say
+                                                                                                                    "
+"SCNTMEL1","How often in the past 12 months would you say you were worried or stressed about having enough money to buy
+               nutritious meals? Would you say
+                                                                                                                    "
+"SCNTPAID","At your main job or business, how are you generally paid for the work you do. Are you:
+                                                                                                                       "
+"SCNTWRK1","About how many hours do you work per week on all of your jobs and businesses combined?
+                                                                                                                       "
+"SCNTLPAD","Thinking about the last time you worked, at your main job or business, how were you generally paid for the work you
+               do? Were you:
+                                                                                                                         "
+"SCNTLWK1","Thinking about the last time you worked, about how many hours did you work per week at all of your jobs and
+               businesses combined?
+                                                                                                                         "
+"SXORIENT","Do you consider yourself to be: (We ask this question in order to better understand the health and health care needs
+                 of people with different sexual orientations.)
+                                                                                                                         "
+"TRNSGNDR","Do you consider yourself to be transgender? (If yes, ask “Do you consider yourself to be male-to-female,
+                 female-to-male, or gender non-conforming?)
+                                                                                                                         "
+"RCSGENDR","Is the child a boy or a girl?
+                                                                                                                  "
+"RCSRLTN2","How are you related to the child?
+                                                                                                                  "
+"CASTHDX2","Has a doctor, nurse or other health professional EVER said that the child has asthma?
+                                                                                                                        "
+"CASTHNO2","Does the child still have asthma?
+                                                                                                                        "
+"EMTSUPRT","How often do you get the social and emotional support you need?
+                                                                                                                        "
+"LSATISFY","In general, how satisfied are you with your life?
+                                                                                                                        "
+"ADPLEASR","Over the last 2 weeks, how many days have you had little interest or pleasure in doing things?
+                                                                                                                        "
+"ADDOWN","Over the last 2 weeks, how many days have you felt down, depressed or hopeless?
+                                                                                                                        "
+"ADSLEEP","Over the last 2 weeks, how many days have you had trouble falling asleep or staying asleep or sleeping too much?
+                                                                                                                        "
+"ADENERGY","Over the last 2 weeks, how many days have you felt tired or had little energy?
+                                                                                                                        "
+"ADEAT1","Over the last 2 weeks, how many days have you had a poor appetite or eaten too much?
+                                                                                                                        "
+"ADFAIL","Over the last 2 weeks, how many days have you felt bad about yourself or that you were a failure or had let yourself
+                   or your family down?
+                                                                                                                            "
+"ADTHINK","Over the last 2 weeks, how many days have you had trouble concentrating on things, such as reading the newspaper
+                   or watching the TV?
+                                                                                                                            "
+"ADMOVE","Over the last 2 weeks, how many days have you moved or spoken so slowly that other people could have noticed? Or
+                   the opposite – being so fidgety or restless that you were moving around a lot more than usual?
+                                                                                                                            "
+"MISTMNT","Are you now taking medicine or receiving treatment from a doctor or other health professional for any type of mental
+                health condition or emotional problem?
+                                                                                                                           "
+"ADANXEV","Has a doctor or other healthcare provider EVER told you that you had an anxiety disorder (including acute stress
+                disorder, anxiety, generalized anxiety disorder, obsessive-compulsive disorder, panic disorder, phobia, posttraumatic
+                stress disorder, or social anxiety disorder)?
+                                                                                                                           "
+"QSTVER","Questionnaire Version Identifier
+                                                                                                                  "
+"QSTLANG","Language identifier
+                                                                                                                  "
+"EXACTOT1","First Activity Other response description
+                                                                                                                  "
+"EXACTOT2","Second Activity Other response description
+                                                                                                                         "
+"MSCODE","Metropolitan Status Code
+                                                                                                                         "
+"X_STSTR","Sample Design Stratification Variable (A five digit number that combines the values for _STATE (first two
+                characters), _GEOSTR (third and fourth character), and _DENSTR2 (final character).)
+                                                                                                                         "
+"X_STRWT","Stratum weight (Number of records in a stratum (NRECSTR) divided by the number of records selected
+                (NRECSEL).)
+                                                                                                                    "
+"X_RAWRAKE","Raw weighting factor used in raking (Number of adults in the household (NUMADULT, maximum of 5) divided by the
+                imputed number of phones (_IMPNPH, maximum of 3).)
+                                                                                                                    "
+"X_WT2RAKE","Design weight used in raking (Stratum weight (_STRWT) multiplied by the raw weighting factor (_RAWRAKE).)
+                                                                                                                    "
+"X_CHISPNC","Child Hispanic, Latino/a, or Spanish origin calculated variable
+                                                                                                                 "
+"X_CRACE1","Child multiracial race categorization
+                                                                                                                 "
+"X_CPRACE","Preferred Child Race Categories
+                                                                                                                      "
+"X_CLLCPWT","Final child weight: Land-line and Cell-Phone data (Raking derived weight)
+                                                                                                                      "
+"X_DUALUSE","Dual Phone Use Categories
+                                                                                                                      "
+"X_DUALCOR","Dual phone use correction factor
+                                                                                                                    "
+"X_LLCPWT","Final weight assigned to each respondent: Land-line and cell-phone data (Raking derived weight)
+                                                                                                                    "
+"X_RFHLTH","Adults with good or better health
+                                                                                                                    "
+"X_HCVU651","Respondents aged 18-64 who have any form of health care coverage
+                                                                                                                         "
+"X_RFHYPE5","Adults who have been told they have high blood pressure by a doctor, nurse, or other health professional
+                                                                                                                         "
+"X_CHOLCHK","Cholesterol check within past five years
+                                                                                                                         "
+"X_RFCHOL","Adults who have had their cholesterol checked and have been told by a doctor, nurse, or other health professional
+                 that it was high
+                                                                                                                         "
+"X_MICHD","Respondents that have ever reported having coronary heart disease (CHD) or myocardial infarction (MI)
+                                                                                                                         "
+"X_LTASTH1","Adults who have ever been told they have asthma
+                                                                                                                         "
+"X_CASTHM1","Adults who have been told they currently have asthma
+                                                                                                                 "
+"X_ASTHMS1","Computed asthma status
+                                                                                                                 "
+"X_DRDXAR1","Respondents who have had a doctor diagnose them as having some form of arthritis
+                                                                                                                 "
+"X_PRACE1","Preferred race category
+                                                                                                               "
+"X_MRACE1","Calculated multiracial race categorization
+                                                                                                                "
+"X_HISPANC","Hispanic, Latino/a, or Spanish origin calculated variable
+                                                                                                                "
+"X_RACE","Race/ethnicity categories
+                                                                                                                "
+"X_RACEG21","White non-Hispanic race group
+                                                                                                                "
+"X_RACEGR3","Five-level race/ethnicity category
+                                                                                                                 "
+"X_RACEX_G1","Race groups used for internet prevalence tables
+                                                                                                                 "
+"X_AGEG5YR","Fourteen-level age category
+                                                                                                                 "
+"X_AGE65YR","Two-level age category
+                                                                                                                 "
+"X_AGE80","Imputed Age value collapsed above 80
+                                                                                                                "
+"X_AGEX_G","Six-level imputed age category
+                                                                                                                "
+"HTIN4","Reported height in inches
+                                                                                                                 "
+"HTM4","Reported height in meters
+                                                                                                                 "
+"WTKG3","Reported weight in kilograms
+                                                                                                                 "
+"X_BMI5","Body Mass Index (BMI)
+                                                                                                                  "
+"X_BMI5CAT","Four-categories of Body Mass Index (BMI)
+                                                                                                                  "
+"X_RFBMI5","Adults who have a body mass index greater than 25.00 (Overweight or Obese)
+                                                                                                                  "
+"X_CHLDCNT","Number of children in household
+                                                                                                                "
+"X_EDUCAG","Level of education completed
+                                                                                                                "
+"X_INCOMG","Income categories
+                                                                                                               "
+"X_SMOKER3","Four-level smoker status: Everyday smoker, Someday smoker, Former smoker, Non-smoker
+                                                                                                               "
+"X_RFSMOK3","Adults who are current smokers
+                                                                                                                         "
+"DRNKANY5","Adults who reported having had at least one drink of alcohol in the past 30 days.
+                                                                                                                         "
+"DROCDY3_","Drink-occasions-per-day
+                                                                                                                         "
+"X_RFBING5","Binge drinkers (males having five or more drinks on one occasion, females having four or more drinks on one
+                occasion)
+                                                                                                                        "
+"X_DRNKWEK","Calculated total number of alcoholic beverages consumed per week
+                                                                                                                        "
+"X_RFDRHV5","Heavy drinkers (adult men having more than 14 drinks per week and adult women having more than 7 drinks per
+                week)
+                                                                                                                        "
+"FTJUDA1_","Fruit juice intake in times per day
+                                                                                                                 "
+"FRUTDA1_","Fruit intake in times per day
+                                                                                                                 "
+"BEANDAY_","Bean intake in times per day
+                                                                                                                 "
+"GRENDAY_","Dark green vegetable intake in times per day
+                                                                                                                 "
+"ORNGDAY_","Orange-colored vegetable intake in times per day
+                                                                                                               "
+"VEGEDA1_","Other vegetable intake in times per day
+                                                                                                               "
+"X_MISFRTN","The number of missing fruit responses
+                                                                                                               "
+"X_MISVEGN","The number of missing vegetable responses
+                                                                                                                "
+"X_FRTRESP","Missing any fruit responses
+                                                                                                                "
+"X_VEGRESP","Missing any vegetable responses
+                                                                                                                "
+"X_FRUTSUM","Total fruits consumed per day
+                                                                                                                "
+"X_VEGESUM","Total vegetables consumed per day
+                                                                                                               "
+"X_FRTLT1","Consume Fruit 1 or more times per day
+                                                                                                               "
+"X_VEGLT1","Consume Vegetables 1 or more times per day
+                                                                                                               "
+"X_FRT16","Reported consuming Fruit >16 per day
+                                                                                                                "
+"X_VEG23","Reported consuming Vegetables >23 per day
+                                                                                                                "
+"X_FRUITEX","Fruit Exclusion from analyses
+                                                                                                                "
+"X_VEGETEX","Vegetable Exclusion from analyses
+                                                                                                                            "
+"X_TOTINDA","Adults who reported doing physical activity or exercise during the past 30 days other than their regular job
+                                                                                                                            "
+"METVL11_","Activity MET Value for First Activity
+                                                                                                                            "
+"METVL21_","Activity MET Value for Second Activity
+                                                                                                                 "
+"MAXVO2_","Estimated Age-Gender Specific Maximum Oxygen Consumption
+                                                                                                                 "
+"FC60_","Estimated Functional Capacity
+                                                                                                                 "
+"ACTIN11_","Estimated Activity Intensity for First Activity
+                                                                                                                 "
+"ACTIN21_","Estimated Activity Intensity for Second Activity
+                                                                                                                 "
+"PADUR1_","Minutes of First Activity
+                                                                                                                 "
+"PADUR2_","Minutes of Second Activity
+                                                                                                                "
+"PAFREQ1_","Physical Activity Frequency per Week for First Activity
+                                                                                                                "
+"PAFREQ2_","Physical Activity Frequency per Week for Second Activity
+                                                                                                                "
+"X_MINAC11","Minutes of Physical Activity per week for First Activity
+                                                                                                                "
+"X_MINAC21","Minutes of Physical Activity per week for Second Activity
+                                                                                                                "
+"STRFREQ_","Strength Activity Frequency per Week
+                                                                                                                "
+"PAMISS1_","Missing Physical Activity Data
+                                                                                                               "
+"PAMIN11_","Minutes of Physical Activity per week for First Activity
+                                                                                                               "
+"PAMIN21_","Minutes of Physical Activity per week for Second Activity
+                                                                                                               "
+"PA1MIN_","Minutes of total Physical Activity per week
+                                                                                                                "
+"PAVIG11_","Minutes of Vigorous Physical Activity per week for First Activity
+                                                                                                                "
+"PAVIG21_","Minutes of Vigorous Physical Activity per week for Second Activity
+                                                                                                                "
+"PA1VIGM_","Minutes of total Vigorous Physical Activity per week
+                                                                                                                "
+"X_PACAT1","Physical Activity Categories
+                                                                                                                           "
+"X_PAINDX1","Physical Activity Index
+                                                                                                                           "
+"X_PA150R2","Adults that participated in 150 minutes (or vigorous equivalent minutes) of physical activity per week.
+                                                                                                                           "
+"X_PA300R2","Adults that participated in 300 minutes (or vigorous equivalent minutes) of physical activity per week.
+                                                                                                                           "
+"X_PA30021","Adults that participated in 300 minutes (or vigorous equivalent minutes) of physical activity per week (2-levels).
+                                                                                                                           "
+"X_PASTRNG","Muscle Strengthening Recommendation
+                                                                                                                           "
+"X_PAREC1","Aerobic and Strengthening Guideline
+                                                                                                                "
+"X_PASTAE1","Aerobic and Strengthening (2-level)
+                                                                                                                "
+"X_LMTACT1","Limited usual activities
+                                                                                                                "
+"X_LMTWRK1","Limited work activities
+                                                                                                                 "
+"X_LMTSCL1","Limited social activities
+                                                                                                                 "
+"X_RFSEAT2","Always or Nearly Always Wear Seat Belts Calculated Variable
+                                                                                                                 "
+"X_RFSEAT3","Always Wear Seat Belts Calculated Variable
+                                                                                                              "
+"X_FLSHOT6","Adults aged 65+ who have had a flu shot within the past year
+                                                                                                              "
+"X_PNEUMO2","Adults aged 65+ who have ever had a pneumonia vaccination
+                                                                                                              "
+"X_AIDTST3","Adults who have ever been tested for HIV
+                                                                                                               "
