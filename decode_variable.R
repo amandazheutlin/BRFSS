@@ -23,7 +23,7 @@ for (i in 2: length(text)){
   meaning <- append(meaning, description)
 }
 
-
+meaning <- unlist(lapply (meaning, function (i) gsub("\n\\s+", "",i))) # remove whitespace and linebreak
 name <- unlist(lapply (name, function (i) ifelse (substring(i,1,1) == "_", gsub("_", "X_",i),i)))
 code_book <- data.frame(variable = name, description = meaning, stringsAsFactors = FALSE)
 
