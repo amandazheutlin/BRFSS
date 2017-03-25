@@ -1,4 +1,5 @@
-source ("./R/decode_variable.R")
+code_book <- read.csv("./R/variable.csv")
+state_code <- read.csv("./R/state_code.csv")
 
 elastic_var <- c("EXERANY2", "EXRACT11", "EXEROFT1", "EXERHMM1",
               "EXRACT21", "EXEROFT2", "EXERHMM2", "STRENGTH", 
@@ -53,16 +54,15 @@ var_important <- function (elastic_model,n){
 
 
 # Core wrapping function to get wrap the label text
-wrap.it <- function(x, len)
+text.wrap <- function(x, len)
 { 
   sapply(x, function(y) paste(strwrap(y, len), 
                               collapse = "\n"), 
          USE.NAMES = FALSE)
 }
 
-
 chart <- function (data, key){
-  label_wrapped <- wrap.it(data$label,50)
+  label_wrapped <- text.wrap(data$label,50)
   if (key == "depression"){
     col <- "#0000CC"
     title <- "What aspects of exercise improve depression?"
@@ -70,7 +70,7 @@ chart <- function (data, key){
     col <- "#339900"
     title <- "What aspects of exercise decrease binge drinking?"
   }
-  fig.varimp <- ggplot(data, aes(x=label_wrapped,y=data$Importance)) + 
+  fig.varimp <- ggplot(data, aes(x=reorder(label_wrapped, Importance),y=data$Importance)) + 
     geom_bar(fill= col,stat="identity",width=.85,alpha=.5) +
     theme(axis.title = element_text(size=15, face="bold"),
           axis.text = element_text(size=10,color="black"),
