@@ -1,5 +1,5 @@
 libs <- c("gbm", "plyr", "dplyr", "psych", "ggplot2", "gdata", "RColorBrewer", "colorRamps", "survey",
-          "caret", "glmnet", "doMC", "foreign")
+          "caret", "glmnet", "doMC", "foreign", "tidyr")
 invisible(lapply(libs, require, character.only = TRUE))
 registerDoMC(cores = detectCores())
 
@@ -10,6 +10,9 @@ find_me ("X_RFBING5")
 brfss2015 <- read.xport("~/R/LLCP2015.XPT ")
 brfss2013 <- read.xport("~/R/LLCP2013.XPT")
 
+# spread the data horizontally
+activity_2015 <- spread_activity(brfss2015)
+activity_2013 <- spread_activity (brfss2013)
 
 # brfss
 depression_2015 <- clean_data_depression(brfss2015)
