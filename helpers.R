@@ -1,5 +1,10 @@
 code_book <- read.csv("./R/variable.csv")
 state_code <- read.csv("./R/state_code.csv")
+activity_code <- read.csv("./R/activity_encoded.csv")
+activity_code <- activity_code[-nrow(activity_code),]
+activity_code$Value <- as.character(activity_code$Value)
+activity_code$Activity <- as.character(activity_code$Activity)
+
 
 elastic_var <- c("EXERANY2", "EXRACT11", "EXEROFT1", "EXERHMM1",
               "EXRACT21", "EXEROFT2", "EXERHMM2", "STRENGTH", 
@@ -15,6 +20,21 @@ find_me <- function (var_name){
   return (meaning)
 }
 
+find_activity <- function (code){
+  meaning <- activity_code$Activity[activity_code$Value == code][1]
+  return (toString(meaning))
+}
+
+spread_activity <- function (data){
+  result <- data
+  result$activity1 <- sapply(result$EXRACT11, function (x) paste(find_activity(x), "_activity 1")) 
+  result$activity2 <- sapply(result$EXRACT21, function (x) paste(find_activity(x), "_activity 2")) 
+  
+  result <- spread(result,key= activity1, value= METVL11_, fill =0) # drop = false will keep all the factor
+  result <- spread(result,key= activity2, value= METVL21_, fill =0)
+  return (result)
+}
+                             
 clean_data_depression <- function (data){
   vars1 <- elastic_var[elastic_var != "X_RFBING5"]
   df.use <- subset(data, MENTHLTH < 31 | MENTHLTH == 88, colnames(data) %in% vars1)
