@@ -1,13 +1,20 @@
 code_book <- read.csv("./R/variable.csv")
 state_code <- read.csv("./R/state_code.csv")
 activity_code <- read.csv("./R/activity_encoded.csv")
+activity_group <- read.csv("./R/activity_group.csv")
+
+
 activity_code <- activity_code[-nrow(activity_code),]
 activity_code$Value <- as.character(activity_code$Value)
 activity_code$Activity <- as.character(activity_code$Activity)
 
 
-elastic_var <- c("EXERANY2", "EXRACT11", "EXEROFT1", "EXERHMM1",
-              "EXRACT21", "EXEROFT2", "EXERHMM2", "STRENGTH", 
+activity_group1 <- activity_group %>% select(code,group) %>% setNames(c("EXRACT11", "group1"))
+activity_group2 <- activity_group %>% select(code,group) %>% setNames(c("EXRACT21", "group2"))
+
+
+elastic_var <- c("EXERANY2", "EXRACT11", "group1", "EXEROFT1", "EXERHMM1",
+              "EXRACT21", "group2", "EXEROFT2", "EXERHMM2", "STRENGTH", 
               "METVL11_", "METVL21_", "FC60_",
               "ACTIN11_", "ACTIN21_", "PADUR1_", "PADUR2_",
               "PAFREQ1_", "PAFREQ2_", "X_MINAC11", "X_MINAC21",
@@ -15,20 +22,26 @@ elastic_var <- c("EXERANY2", "EXRACT11", "EXEROFT1", "EXERHMM1",
               "PAVIG11_", "PAVIG21_", "PA1VIGM_", "X_PACAT1",
               "X_PASTRNG", "X_PAREC1", "X_PASTAE1", "MENTHLTH","X_RFBING5")
 
+
 find_me <- function (var_name){
-  meaning <- code_book$meaning[code_book$name == var_name][1]
-  return (meaning)
+  meaning <- code_book$description[code_book$variable == var_name][1]
+  return (toString(meaning))
 }
+
+
 
 find_activity <- function (code){
   meaning <- activity_code$Activity[activity_code$Value == code][1]
   return (toString(meaning))
 }
 
+
+
 spread_activity <- function (data){
   result <- data
-  result$activity1 <- sapply(result$EXRACT11, function (x) paste(find_activity(x), "_activity 1")) 
-  result$activity2 <- sapply(result$EXRACT21, function (x) paste(find_activity(x), "_activity 2")) 
+  result$activity1 <- sapply(result$EXRACT11, function (x) gsub(" ", "_",paste(find_activity(x), "activity_1"))) 
+  # concatenate name, then replace whitespace with "-"
+  result$activity2 <- sapply(result$EXRACT21, function (x) gsub(" ", "_",paste(find_activity(x), "activity_2"))) 
   
   result <- spread(result,key= activity1, value= METVL11_, fill =0) # drop = false will keep all the factor
   result <- spread(result,key= activity2, value= METVL21_, fill =0)
