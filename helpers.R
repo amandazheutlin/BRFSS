@@ -12,7 +12,6 @@ activity_code$Activity <- as.character(activity_code$Activity)
 activity_group1 <- activity_group %>% select(code,group) %>% setNames(c("EXRACT11", "group1"))
 activity_group2 <- activity_group %>% select(code,group) %>% setNames(c("EXRACT21", "group2"))
 
-
 elastic_var <- c("EXERANY2", "EXRACT11", "group1", "EXEROFT1", "EXERHMM1",
               "EXRACT21", "group2", "EXEROFT2", "EXERHMM2", "STRENGTH", 
               "METVL11_", "METVL21_", "FC60_",
@@ -20,7 +19,14 @@ elastic_var <- c("EXERANY2", "EXRACT11", "group1", "EXEROFT1", "EXERHMM1",
               "PAFREQ1_", "PAFREQ2_", "X_MINAC11", "X_MINAC21",
               "STRFREQ_", "PAMIN11_", "PAMIN21_", "PA1MIN_",
               "PAVIG11_", "PAVIG21_", "PA1VIGM_", "X_PACAT1",
-              "X_PASTRNG", "X_PAREC1", "X_PASTAE1", "MENTHLTH","X_RFBING5")
+              "X_PASTRNG", "X_PAREC1", "X_PASTAE1", "MENTHLTH","X_RFBING5", "aerobic_gym_1", 
+              "bicycling_1", "competitive_sport_1", "household_1", "missing_1",          
+              "other_1", "recreational_1", "running_1", "walking_jogging_1",
+              "water_1", "winter_1", "aerobic_gym_2", "bicycling_2", "competitive_sport_2",
+              "household_2", "missing_2","other_2","recreational_2", "running_2", 
+              "walking_jogging_2", "water_2","winter_2")
+
+
 
 
 find_me <- function (var_name){
@@ -36,7 +42,6 @@ find_activity <- function (code){
 }
 
 
-
 spread_activity <- function (data){
   result <- data
   result$activity1 <- sapply(result$EXRACT11, function (x) gsub(" ", "_",paste(find_activity(x), "activity_1"))) 
@@ -47,24 +52,27 @@ spread_activity <- function (data){
   result <- spread(result,key= activity2, value= METVL21_, fill =0)
   return (result)
 }
-                             
-clean_data_depression <- function (data){
-  vars1 <- elastic_var[elastic_var != "X_RFBING5"]
-  df.use <- subset(data, MENTHLTH < 31 | MENTHLTH == 88, colnames(data) %in% vars1)
-  df.use$mh.coded <- ifelse(df.use$MENTHLTH == 88, 0, df.use$MENTHLTH)
-  
-  # elastic net regression for emotional distress, only use complete cases
-  df.na <- df.use
-  df.na [is.na(df.na)] <-1 # set NA to -1
-  df.mhonly <- df.na[df.na$mh.coded>0,] # only those with distresses (ignore 0 and -1)
-  
-  pred    <- df.mhonly %>% dplyr::select(EXERANY2:X_PASTAE1) #predictors, ignore "MENTHLTH" and "md.coded"
-  outcome <- df.mhonly[complete.cases(df.mhonly$mh.coded),30]
-  
-  result <- data.frame(pred,outcome)
+
+
+spread_group <- function(data){
+  result <- data
+  result$group1_2 <- sapply(result$group1, function(x) paste(x,"_1", sep=""))
+  result$group2_2 <- sapply(result$group2, function(x) paste(x,"_2", sep=""))
+  result <- spread(result, key = group1_2, value = METVL11_, fill =0)
+  result <- spread(result, key = group2_2, value = METVL21_, fill =0)
   return (result)
 }
 
+clean_data_depression <- function (data){
+  vars1 <- elastic_var[elastic_var != "X_RFBING5"]
+  df.use <- subset(data, MENTHLTH < 31 | MENTHLTH == 88, colnames(data) %in% vars1)
+  df.use$outcome<- ifelse(df.use$MENTHLTH == 88, 0, df.use$MENTHLTH)
+  df.use <- df.use[df.use$outcome>0,]
+  
+  return (df.use)
+}
+                            
+                            
 clean_data_binge <- function (data){
   vars2 <- elastic_var[elastic_var != "MENTHLTH"]
   df.binge <- data[,colnames(data) %in% vars2]
