@@ -7,20 +7,14 @@ source("~/R/helpers.R")
 
 find_me("MENTHLTH")
 find_me ("X_RFBING5")
-brfss2015 <- read.xport("~/R/LLCP2015.XPT ")
-brfss2013 <- read.xport("~/R/LLCP2013.XPT")
+brfss2015 <- read.xport("~/R/downloaded/LLCP2015.XPT ")
+# replace NA in EXRACT11 and EXRACT12 by 100 so that we have column missing
+brfss2015[is.na(brfss2015$EXRACT11), "EXRACT11"] <- 100
+brfss2015[is.na(brfss2015$EXRACT21), "EXRACT21"] <- 100
 
+brfss2015 <- brfss2015 %>% merge(activity_group1, by = "EXRACT11") %>% merge (activity_group2, by = "EXRACT21")
 
-# spread the data horizontally
-activity_2015 <- spread_activity(brfss2015)
-activity_2013 <- spread_activity (brfss2013)
-
-brfss2015 <- merge(brfss2015, activity_group1, by = "EXRACT11")
-brfss2015 <- merge(brfss2015, activity_group2, by = "EXRACT21")
-
-# brfss
-depression_2015 <- clean_data_depression(brfss2015)
-depression_2013 <- clean_data_depression(brfss2013)
+depression_2015<- spread_group(brfss2015) %>% clean_data_depression()
 
 ggplot(depression_2015, aes(x= group1, y=outcome, color = group1)) + 
   geom_boxplot() +coord_flip() + ylab ("Days of depression") + xlab ("activity 1 type") + theme(legend.position = "none")
@@ -38,6 +32,24 @@ anova(lm(outcome~group2, data = depression_2))
 depression_2015 <- subset (depression_2015, group1 != "missing" || group2 != "missing" )
 test <- aov(outcome~group1*group2,data=depression_2015)
 summary(test)
+
+
+#######2013 data
+
+brfss2013 <- read.xport("~/R/downloaded/LLCP2013.XPT")
+brfss2013[is.na(brfss2013$EXRACT11), "EXRACT11"] <- 100
+brfss2013[is.na(brfss2013$EXRACT21), "EXRACT21"] <- 100
+brfss2013 <- brfss2013 %>% merge(activity_group1, by = "EXRACT11") %>% merge (activity_group2, by = "EXRACT21")
+
+depression_2013<- spread_group(brfss2013) %>% clean_data_depression()
+ggplot(depression_2013, aes(x= group1, y=outcome, color = group1)) + 
+  geom_boxplot() +coord_flip() + ylab ("Days of depression") + xlab ("activity 1 type") + theme(legend.position = "none")
+ggplot(depression_2013, aes(x= group2, y=outcome, color = group2)) + geom_boxplot() + 
+  coord_flip() + ylab ("Days of depression") + xlab ("activity 2 type") + theme(legend.position = "none")
+
+# spread according to activity
+activity_2015 <- spread_activity(brfss2015)
+activity_2013 <- spread_activity(brfss2013)
 
 ############################
 # Elastic net on depression#
