@@ -1,5 +1,5 @@
 libs <- c("gbm", "plyr", "dplyr", "psych", "ggplot2", "gdata", "RColorBrewer", "colorRamps", "survey",
-          "caret", "glmnet", "doMC", "foreign", "tidyr")
+          "caret", "glmnet", "doMC", "foreign", "tidyr", "MatchIt")
 invisible(lapply(libs, require, character.only = TRUE))
 registerDoMC(cores = detectCores())
 
@@ -14,6 +14,28 @@ brfss2015[is.na(brfss2015$EXRACT21), "EXRACT21"] <- 100
 
 brfss2015 <- brfss2015 %>% merge(activity_group1, by = "EXRACT11") %>% merge (activity_group2, by = "EXRACT21")
 
+### propensity matching 
+walking_vs_running <- subset(brfss2015, group1 %in% c("walking_jogging", "running")) %>%
+  select(group1, CADULT,PHYSHLTH,SEX,MARITAL,EXEROFT1,EXERHMM1, MENTHLTH, METVL11_) %>% 
+  na.omit() %>%
+  subset((PHYSHLTH < 31 | PHYSHLTH == 88) & (MARITAL != 9) & (EXEROFT1 <= 299) &
+           (EXERHMM1 <= 959 & EXERHMM1 != 777) & (MENTHLTH <31 | MENTHLTH == 88))
+
+walking_vs_running$MENTHLTH <- ifelse(walking_vs_running$MENTHLTH ==88 ,0, walking_vs_running$MENTHLTH)
+walking_vs_running$PHYSHLTH <- ifelse(walking_vs_running$PHYSHLTH ==88,0, walking_vs_running$PHYSHLTH)
+walking_vs_running[,c("CADULT", "SEX", "MARITAL")] <- lapply(walking_vs_running[,c("CADULT", "SEX", "MARITAL")], factor)
+walking_vs_running$group1 <- drop.levels(walking_vs_running$group1)
+walking_vs_running$running <- as.integer(ifelse(as.character(walking_vs_running$group1) == "running",1,0))
+summary(walking_vs_running)
+
+
+match <- matchit(running ~  PHYSHLTH+EXERHMM1 + CADULT + SEX + MARITAL + EXEROFT1 + METVL11_, data = walking_vs_running, method ="nearest")
+summary(match)
+new_data <- match.data(match)
+t.test(new_data$MENTHLTH ~ new_data$group1)
+
+
+# General plotting
 depression_2015<- spread_group(brfss2015) %>% clean_data_depression()
 
 ggplot(depression_2015, aes(x= group1, y=outcome, color = group1)) + 
