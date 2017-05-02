@@ -1,5 +1,5 @@
 libs <- c("gbm", "plyr", "dplyr", "psych", "ggplot2", "gdata", "RColorBrewer", "colorRamps", "survey",
-          "caret", "glmnet", "doMC", "foreign", "tidyr", "MatchIt")
+          "caret", "glmnet", "doMC", "foreign", "tidyr", "MatchIt", "twang")
 invisible(lapply(libs, require, character.only = TRUE))
 registerDoMC(cores = detectCores())
 
@@ -12,7 +12,88 @@ brfss2015 <- read.xport("~/R/downloaded/LLCP2015.XPT ")
 brfss2015[is.na(brfss2015$EXRACT11), "EXRACT11"] <- 100
 brfss2015[is.na(brfss2015$EXRACT21), "EXRACT21"] <- 100
 
-brfss2015 <- brfss2015 %>% merge(activity_group1, by = "EXRACT11") %>% merge (activity_group2, by = "EXRACT21")
+brfss2015 <- brfss2015 %>% merge(activity_group1, by = "EXRACT11") %>% merge (activity_group2, by = "EXRACT21") 
+
+#team vs individual
+team_data_1 <- subset(brfss2015, !is.na(team1)) %>% 
+  plyr::mutate(brfss2015,team1 = as.factor(team1)) %>% 
+  clean_data_depression()
+# data is very skewed -> good for propensity matching
+ggplot(team_data_1, aes(x= team1, y=outcome, color = team1)) + 
+  geom_boxplot() +coord_flip() + ylab ("Days of depression") + xlab ("Team sport?") + theme(legend.position = "none")
+t.test(team_data_1$MENTHLTH~team_data_1$team1)
+
+#mindful 
+mindful_1 <- subset(brfss2015, !is.na(mindful1)) %>% 
+  plyr::mutate(brfss2015,mindful1 = as.factor(mindful1)) %>% 
+  clean_data_depression()
+ggplot(mindful_1, aes(x= mindful1, y=outcome, color = mindful1)) + 
+  geom_boxplot() +coord_flip() + ylab ("Days of depression") + xlab ("Mindful activity?") + theme(legend.position = "none")
+t.test(mindful_1$MENTHLTH ~ mindful_1$mindful1)
+
+#activity vs non
+activity <- plyr::mutate(brfss2015, activity = as.factor(ifelse(group1 =="missing",0,1))) %>%
+  clean_data_depression()
+ggplot(activity, aes(x= activity, y=outcome, color = activity)) + 
+  geom_boxplot() +coord_flip() + ylab ("Days of depression") + xlab ("Do exercise?") + theme(legend.position = "none")
+t.test(activity$MENTHLTH~activity$activity)
+
+# pairwise table of p-value
+pairwise <- clean_data_depression(brfss2015) %>% subset(group1 != "missing") %>% 
+  plyr::mutate(group1 = droplevels(group1))
+
+activity_a <- vector(mode = "character", length = 0)
+activity_b <- vector(mode = "character", length = 0)
+p_value <- vector(mode = "numeric", length = 0)
+abs_difference <- vector(mode = "numeric", length =0)
+for (i in levels(pairwise$group1)){
+  compare_list = levels(pairwise$group1)[levels(pairwise$group1) != i]
+  for (x in compare_list){
+    data <- subset(pairwise, group1 == i| group1 == x )
+    test <- t.test(data$MENTHLTH ~ data$group1)
+    abs_dff <- abs(test$estimate[1] - test$estimate[2])
+    p_value <- c(p_value, test$p.value)
+    abs_difference <- c(abs_difference, abs_dff)
+  }
+  activity_a <- c(activity_a, rep(i, times = length(compare_list)))
+  activity_b <- c(activity_b, compare_list)
+}
+
+table <- data.frame(activity_a, activity_b, p_value, abs_difference) %>%
+  plyr::mutate(p_value = format(p_value, scientific = TRUE, digits =2))
+an <- levels(pairwise$group1) 
+M <- array(0, c(length(an), length(an)), list(an, an))
+i <- match(table$activity_a,an)
+j <- match(table$activity_b,an)
+M[cbind(i,j)] <- M[cbind(j,i)] <- table$abs_difference # if print p_value first, M will take in chr str
+M[cbind(i,j)] <- M[cbind(j,i)] <- table$p_value
+
+
+
+### propensity matching with gbm
+data <- subset(brfss2015, group1 != "missing") %>%
+  select(group1, CADULT,PHYSHLTH,SEX,MARITAL,EXEROFT1,EXERHMM1, MENTHLTH, METVL11_) %>% 
+  na.omit() %>% 
+  subset((PHYSHLTH < 31 | PHYSHLTH == 88) & (MARITAL != 9) & (EXEROFT1 <= 299) &
+           (EXERHMM1 <= 959 & EXERHMM1 != 777) & (MENTHLTH <31 | MENTHLTH == 88)) %>%
+  plyr::mutate (group1 = droplevels(group1), MENTHLTH = ifelse(MENTHLTH ==88,0, MENTHLTH),
+                PHYSHLTH = ifelse (PHYSHLTH ==88,0,PHYSHLTH), CADULT = factor(CADULT), SEX = factor(SEX), MARITAL = factor (MARITAL))
+
+
+mnps.data <- mnps(group1 ~ CADULT + PHYSHLTH + SEX + MARITAL + EXEROFT1 + EXERHMM1 + METVL11_,
+                  data = data,
+                  estimand = "ATE",
+                  verbose = FALSE,
+                  stop.method = c("es.mean", "ks.mean"),
+                  n.tree = 1000)
+summary (mnps.data)
+
+data$w <- get.weights(mnps.data, stop.method = "es.mean") # get the weigths to calculate difference in ATE
+design.mnps <- svydesign(ids=~1, weights=~w, data=data)
+
+glm1 <- svyglm(MENTHLTH ~ as.factor(group1), design = design.mnps)
+summary(glm1)
+plot(mnps.data, plots = 3, pairwiseMax = FALSE, figureRows = 3)
 
 ### propensity matching 
 walking_vs_running <- subset(brfss2015, group1 %in% c("walking_jogging", "running")) %>%
