@@ -1,0 +1,80 @@
+code,group,activity_name,team,mindful
+3,walking_jogging,Backpacking,0,0
+22,walking_jogging,Hiking -cross-country,0,0
+24,walking_jogging,Horsback riding,0,0
+25,walking_jogging,"Hunting large-game - deer, elk",0,0
+26,walking_jogging,Hunting small-game - quail,0,0
+27,walking_jogging,Inline skating,0,0
+28,walking_jogging,Jogging,0,0
+30,walking_jogging,Moutain climbing,0,0
+38,walking_jogging,Rock Climbing,0,0
+39,walking_jogging,Rope skipping,0,0
+44,walking_jogging,Skating - ice or roller,0,0
+54,walking_jogging,Stair climbing/Stair master,0,0
+64,walking_jogging,Walking ,0,0
+2,aerobic_gym,Aerobics video or class,0,0
+10,aerobic_gym,Boxing,0,0
+14,aerobic_gym,"Dancing-ballet, ballroom, Latin, hip hop, etc",0,0
+11,aerobic_gym,Calisthenics,0,0
+15,aerobic_gym,Elliptical/EFX machine exercise,0,0
+34,aerobic_gym,Pilates,0,0
+40,aerobic_gym,Rowing machine exercise,0,0
+60,aerobic_gym,Tai Chi,0,1
+67,aerobic_gym,Weight lifting,0,0
+68,aerobic_gym,Wrestling,0,0
+69,aerobic_gym,Yoga,0,1
+74,aerobic_gym,Karate/Martial Arts,0,0
+75,aerobic_gym,"Upper Body Cycle (wheelchair sports, ergometer, etc.)",0,0
+6,bicycling,Bicycling machine exercise,0,0
+7,bicycling,Bicycling,0,0
+4,competitive_sport,Badminton,0,0
+5,competitive_sport,Basketball,0,0
+12,competitive_sport,Canoeing/rowing in competition,1,0
+17,competitive_sport,Frisbee,1,0
+21,competitive_sport,Handball,1,0
+23,competitive_sport,Hockey,1,0
+29,competitive_sport,Lacross,1,0
+35,competitive_sport,Racquetball,1,0
+41,competitive_sport,Rugby,1,0
+51,competitive_sport,Soccer,1,0
+52,competitive_sport,Softball/Baseball,1,0
+53,competitive_sport,Squash,1,0
+59,competitive_sport,Table tennis,1,0
+61,competitive_sport,Tennis,1,0
+62,competitive_sport,Touch football,1,0
+63,competitive_sport,Volleyball,1,0
+43,winter,Skateboarding,0,0
+45,winter,"Sledding, tobogganing",0,0
+47,winter,Snow blowing,0,0
+49,winter,Snow skiing,0,0
+50,winter,Showshoeing,0,0
+42,water,Scuba diving,0,0
+46,water,Snorkeling,0,0
+56,water,Surfing,0,0
+57,water,Swimming,0,0
+58,water,Swimming in laps,0,0
+13,household,Carpentry,NA,NA
+18,household,"Gardening (spading, weeding, digging, filling)",NA,NA
+31,household,Mowing lawn,NA,NA
+33,household,Painting/papering house,NA,NA
+36,household,Raking lawn,NA,NA
+48,household,Snow shoveling by hand,NA,NA
+71,household,Childcare,NA,NA
+72,household,"Farm/Ranch Work (caring for livestock, stacking hay, etc.)",NA,NA
+73,household,"Household Activities (vacuuming, dusting, home repair, etc.)",NA,NA
+76,household,"Yard work (cutting/gathering wood, trimming hedges, etc.)",NA,NA
+1,recreational,"Active Gaming Devices (Wii Fit, Dance, Dance revolution)",NA,0
+8,recreational,"Boating (Canoeing, rowing, kayaking, sailing for pleasure or camping",0,0
+9,recreational,Bowling,0,0
+16,recreational,Fishing from river bank or boat,0,1
+19,recreational,Golf (with motorized car),0,0
+20,recreational,Golf (without motorized car),0,0
+32,recreational,Paddleball,1,0
+55,recreational,Stream fishing in waders,0,1
+66,recreational,Waterskiing,0,0
+37,running,Running,0,0
+98,other,Other,NA,NA
+88,missing,No other activity----Go to Section 11.08 STRENGTH,NA,NA
+77,missing,Don?t know/Not Sure----Go to Section 11.08 STRENGTH,NA,NA
+99,missing,Refused----Go to Section 11.08 STRENGTH,NA,NA
+100,missing,NA,NA,NA
