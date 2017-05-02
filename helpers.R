@@ -9,8 +9,10 @@ activity_code$Value <- as.character(activity_code$Value)
 activity_code$Activity <- as.character(activity_code$Activity)
 
 
-activity_group1 <- activity_group %>% select(code,group) %>% setNames(c("EXRACT11", "group1"))
-activity_group2 <- activity_group %>% select(code,group) %>% setNames(c("EXRACT21", "group2"))
+
+activity_group1 <- activity_group %>% select(code,group, team, mindful) %>% setNames(c("EXRACT11", "group1", "team1", "mindful1"))
+activity_group2 <- activity_group %>% select(code,group, team, mindful) %>% setNames(c("EXRACT21", "group2", "team2", "mindful2"))
+
 
 elastic_var <- c("EXERANY2", "EXRACT11", "group1", "EXEROFT1", "EXERHMM1",
               "EXRACT21", "group2", "EXEROFT2", "EXERHMM2", "STRENGTH", 
@@ -24,7 +26,7 @@ elastic_var <- c("EXERANY2", "EXRACT11", "group1", "EXEROFT1", "EXERHMM1",
               "other_1", "recreational_1", "running_1", "walking_jogging_1",
               "water_1", "winter_1", "aerobic_gym_2", "bicycling_2", "competitive_sport_2",
               "household_2", "missing_2","other_2","recreational_2", "running_2", 
-              "walking_jogging_2", "water_2","winter_2")
+              "walking_jogging_2", "water_2","winter_2", "team1", "team2", "mindful1", "mindful2", "activity")
 
 
 
